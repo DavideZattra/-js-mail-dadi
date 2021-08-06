@@ -25,15 +25,26 @@ registeredEmail = ["francoferry@gmail.com", "d.zattra@gmail.com", "simona.vitiel
 userEmail = prompt("Inserire la mail tua mail!")
 
 // Check if the user email is in the e-mail array and Create the appropiate message 
-if ( registeredEmail.includes(userEmail) ){
-    // If true
-    document.getElementById("ms_user-registered").innerHTML = 'Utente registrato <i class="far fa-check-square"></i>';
+for (var i = 0; i <6; i++ ){
+    
+    if (registeredEmail[i] = userEmail){
+        
+        document.getElementById("ms_user-registered").innerHTML = 'Utente registrato <i class="far fa-check-square"></i>';
 
-} else {
-    // If false
-    document.getElementById("ms_user-not-registered").innerHTML = 'Utente non registrato <i class="fas fa-exclamation-triangle"></i>';
+    } else {
+
+        document.getElementById("ms_user-not-registered").innerHTML = 'Utente non registrato <i class="fas fa-exclamation-triangle"></i>';
+
+    }
 
 }
+// if ( registeredEmail.includes(userEmail) ){
+//     // If true
+
+// } else {
+//     // If false
+
+// }
 
 
 // B 
