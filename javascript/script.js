@@ -27,11 +27,11 @@ userEmail = prompt("Inserire la mail tua mail!")
 // Check if the user email is in the e-mail array and Create the appropiate message 
 if ( registeredEmail.includes(userEmail) ){
     // If true
-    console.log("L'utente è già registrato")
+    document.getElementById("ms_user-registered").innerHTML = 'Utente registrato <i class="far fa-check-square"></i>';
 
 } else {
     // If false
-    console.log("E-Mail non registrata")
+    document.getElementById("ms_user-not-registered").innerHTML = 'Utente non registrato <i class="fas fa-exclamation-triangle"></i>';
 
 }
 
