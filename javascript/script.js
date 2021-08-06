@@ -11,14 +11,55 @@
  *     Stabilire il vincitore o la vincitrice, in base a chi fa il punteggio più alto.
  */
 
+
+
 // A
+// Establish the variables
+let registeredEmail;
+let userEmail;
+
 // Create the array with the registered e-mail
+registeredEmail = ["francoferry@gmail.com", "d.zattra@gmail.com", "simona.vitiello@libero.com", "hseanbaggett81@aevtpet.com", "dniko_leilak@burgas.vip", "3jose.r.mirandari@superhostformula.com"];
+
 // Get the user e-mail with a prompt
-// Check if the user email is in the e-mail array
-// Create the appropiate message 
+userEmail = prompt("Inserire la mail tua mail!")
+
+// Check if the user email is in the e-mail array and Create the appropiate message 
+if ( registeredEmail.includes(userEmail) ){
+    // If true
+    console.log("L'utente è già registrato")
+
+} else {
+    // If false
+    console.log("E-Mail non registrata")
+
+}
+
 
 // B 
 // Establish the variables
+let userRandomNumber;
+let computerRandomNumber;
+
 // Generate randomic number for the user
+userRandomNumber = parseInt( 6 * Math.random()) + 1;
+console.log(userRandomNumber);
+
 // Generate randomic number for the computer
+computerRandomNumber = parseInt( 6 * Math.random()) + 1;
+console.log(computerRandomNumber);
+
 // Compare the assigned numbers to get the winner
+if (userRandomNumber > computerRandomNumber){
+    // user wins
+    console.log("Ha vinto l'umano!")
+
+} else if ( userRandomNumber < computerRandomNumber ){
+    // user lose
+    console.log("Ha vinto la macchina!")
+
+} else {
+    // It's a draw
+    console.log("La sfida è finita in parità...")
+
+}
