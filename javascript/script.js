@@ -17,6 +17,7 @@
 // Establish the variables
 let registeredEmail;
 let userEmail;
+let flag  = false;
 
 // Create the array with the registered e-mail
 registeredEmail = ["francoferry@gmail.com", "d.zattra@gmail.com", "simona.vitiello@libero.com", "hseanbaggett81@aevtpet.com", "dniko_leilak@burgas.vip", "3jose.r.mirandari@superhostformula.com"];
@@ -25,26 +26,28 @@ registeredEmail = ["francoferry@gmail.com", "d.zattra@gmail.com", "simona.vitiel
 userEmail = prompt("Inserire la mail tua mail!")
 
 // Check if the user email is in the e-mail array and Create the appropiate message 
-for (var i = 0; i <6; i++ ){
+for (var i = 0; i < registeredEmail.length ; i++ ){
     
-    if (registeredEmail[i] = userEmail){
+
+    console.log(i, registeredEmail[i])
+
+    if (registeredEmail[i] == userEmail){
         
-        document.getElementById("ms_user-registered").innerHTML = 'Utente registrato <i class="far fa-check-square"></i>';
-
+        flag = true;
+        
+    }
+    
+} 
+console.log(flag);
+if ( flag ){
+    // If true
+    document.getElementById("ms_user-registered").innerHTML = 'Utente registrato <i class="far fa-check-square"></i>';
+    
     } else {
-
+        //     // If false
         document.getElementById("ms_user-not-registered").innerHTML = 'Utente non registrato <i class="fas fa-exclamation-triangle"></i>';
 
-    }
-
-}
-// if ( registeredEmail.includes(userEmail) ){
-//     // If true
-
-// } else {
-//     // If false
-
-// }
+ }
 
 
 // B 
